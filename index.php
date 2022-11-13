@@ -20,7 +20,7 @@ if(isset($_GET['kitab']) and isset($_GET['id']) and is_numeric($_GET['id'])){
 }
 
 
-elseif(isset($_GET['q'])){
+elseif(isset($_GET['q']) and !empty($_GET['q'])){
   $query = urldecode($_GET['q']);
   if(empty($query))exit('query kosong');
   $files = "$dir/*_*";
